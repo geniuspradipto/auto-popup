@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <!-- <meta http-equiv="refresh" content="4" > -->
+    <title>Auto Popup</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="contentBox">
+            <div class="close"></div>
+            <div class="imgBx" style="float:left;">
+                <img src="gift.png" alt="surprise">
+            </div>
+            <div class="content" style="float:left;">
+                <div>
+                    <h3>Special Offer</h3>
+                    <h2>80<sup>%</sup><span>Off</span></h2>
+                    <p>Lorem ipsum dolor sit amet
+                    consectetur adip?lkfoaskfn alskdnfaskfn
+                    </p>
+                    <a href="#">Get the Deal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Automatic show popup after 2 seconds of page loading -->
+    <script>
+        const popup = document.querySelector('.popup');
+        const close = document.querySelector('.close');
+        window.onload = function() {
+            setTimeout(function() {
+                popup.style.display = "block";
+
+                //Adding some time delay
+            },2000)   
+        }
+
+        close.addEventListener("click", () => {
+            popup.style.display = "none";
+        })
+
+    </script>
+
+</body>
+</html>
